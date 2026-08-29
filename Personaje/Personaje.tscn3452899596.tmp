@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://lcud3s6gvb1s" path="res://Personaje/personaje.gd" id="1_hecfx"]
 
-[sub_resource type="Compositor" id="Compositor_hecfx"]
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jq8tk"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3xd07"]
@@ -13,7 +11,6 @@ script = ExtResource("1_hecfx")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=564268960]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
-compositor = SubResource("Compositor_hecfx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1861795096]
 shape = SubResource("CapsuleShape3D_jq8tk")

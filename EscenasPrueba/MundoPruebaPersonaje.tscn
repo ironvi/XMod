@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b65j6e36psrbf"]
+
+[ext_resource type="PackedScene" uid="uid://bg8v2meo56n40" path="res://Personaje/Personaje.tscn" id="1_aojpo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_h83rl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3xd07"]
+size = Vector3(1, 0.023, 1)
+
+[node name="Mundo" type="Node3D" unique_id=634787007]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1204419752]
+transform = Transform3D(1.03, 0, 0, 0, 1.03, 0, 0, 0, 1.03, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=264762164]
+transform = Transform3D(15, 0, 0, 0, 0.3, 0, 0, 0, 15, -0.0005660057, 0.0086500645, -0.0040779114)
+mesh = SubResource("BoxMesh_h83rl")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1978222994]
+transform = Transform3D(15, 0, 0, 0, 15.000001, 0, 0, 0, 15, -5.6512295e-11, 0, -4.5209836e-10)
+shape = SubResource("BoxShape3D_3xd07")
+
+[node name="CharacterBody3D" parent="." unique_id=2048251645 instance=ExtResource("1_aojpo")]
+transform = Transform3D(-0.8943201, 0, 0.4474278, 0, 1, 0, -0.4474278, 0, -0.8943201, 0.1621871, 1.0575001, -0.995165)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=421334149]
+transform = Transform3D(1, 0, 0, 0, 0.25881907, 0.9659258, 0, -0.9659258, 0.25881907, 0, 12.229206, 12.875641)
